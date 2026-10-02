@@ -31,6 +31,5 @@ module converted_gray_to_binary(
     output wire Ca,
     output wire Cb,
     output wire Cc
-    
     );
 endmodule

@@ -23,9 +23,11 @@
 module comparador_1bit (
     input wire A,
     input wire B,
+    
     input wire GT_in, // (A > B anterior)
     input wire EQ_in, // (A == B anterior)
     input wire LT_in, // (A < B anterior)
+    
     output wire GT_out,
     output wire EQ_out,
     output wire LT_out
