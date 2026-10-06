@@ -26,9 +26,9 @@ module comparador_1bit (
     input wire T,        // Posición Objetivo T
     
     // Entradas en cascada dicho en el proyecto
-    input wire menor_in,            // P < T anterior
-    input wire igual_in,            // P == T anterior
     input wire mayor_in,            // P > T anterior
+    input wire igual_in,            // P == T anterior
+    input wire menor_in,            // P < T anterior
     
     // Salidas en cascada, para repetirlo N bits
     output wire mayor_out,          // P > T
