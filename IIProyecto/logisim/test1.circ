@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="4.1.0" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v4.1.0(https://github.com/logisim-evolution/).
+
+  <lib desc="#Wiring" name="0">
+    <tool name="Pin">
+      <a name="appearance" val="classic"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#FPArithmetic" name="4"/>
+  <lib desc="#Memory" name="5"/>
+  <lib desc="#I/O" name="6"/>
+  <lib desc="#TTL" name="7"/>
+  <lib desc="#TCL" name="8"/>
+  <lib desc="#Base" name="9"/>
+  <lib desc="#BFH-Praktika" name="10"/>
+  <lib desc="#Input/Output-Extra" name="11"/>
+  <lib desc="#Soc" name="12"/>
+  <main name="main"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="9" map="Button2" name="Poke Tool"/>
+    <tool lib="9" map="Button3" name="Menu Tool"/>
+    <tool lib="9" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="9" name="Poke Tool"/>
+    <tool lib="9" name="Edit Tool"/>
+    <tool lib="9" name="Wiring Tool"/>
+    <tool lib="9" name="Text Tool"/>
+    <sep/>
+    <tool lib="0" name="Pin"/>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="type" val="output"/>
+    </tool>
+    <sep/>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+    <tool lib="1" name="XOR Gate"/>
+    <tool lib="1" name="NAND Gate"/>
+    <tool lib="1" name="NOR Gate"/>
+    <sep/>
+    <tool lib="5" name="D Flip-Flop"/>
+    <tool lib="5" name="Register"/>
+  </toolbar>
+  <circuit name="main">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="main"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(90,110)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(90,130)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(90,150)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(90,170)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(90,190)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp loc="(310,110)" name="comparador_1_bit"/>
+    <comp loc="(590,110)" name="comparador_1_bit"/>
+    <comp loc="(850,110)" name="comparador_1_bit"/>
+  </circuit>
+  <circuit name="comparador_1_bit">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="comparador_1_bit"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(110,110)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="L_int"/>
+    </comp>
+    <comp lib="0" loc="(110,150)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="P"/>
+    </comp>
+    <comp lib="0" loc="(110,180)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="T"/>
+    </comp>
+    <comp lib="0" loc="(110,50)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="E_int"/>
+    </comp>
+    <comp lib="0" loc="(110,80)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="G_int"/>
+    </comp>
+    <comp lib="0" loc="(820,170)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="E_out"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(830,240)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="G_out"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(830,310)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="L_out"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="1" loc="(270,190)" name="NOT Gate"/>
+    <comp lib="1" loc="(270,300)" name="NOT Gate"/>
+    <comp lib="1" loc="(270,350)" name="XOR Gate"/>
+    <comp lib="1" loc="(340,210)" name="AND Gate"/>
+    <comp lib="1" loc="(340,280)" name="AND Gate"/>
+    <comp lib="1" loc="(340,350)" name="NOT Gate"/>
+    <comp lib="1" loc="(460,190)" name="AND Gate"/>
+    <comp lib="1" loc="(460,260)" name="AND Gate"/>
+    <comp lib="1" loc="(460,330)" name="AND Gate"/>
+    <comp lib="1" loc="(590,170)" name="OR Gate"/>
+    <comp lib="1" loc="(590,240)" name="OR Gate"/>
+    <wire from="(110,110)" to="(540,110)"/>
+    <wire from="(110,150)" to="(210,150)"/>
+    <wire from="(110,180)" to="(190,180)"/>
+    <wire from="(110,50)" to="(400,50)"/>
+    <wire from="(110,80)" to="(520,80)"/>
+    <wire from="(190,180)" to="(190,230)"/>
+    <wire from="(190,230)" to="(190,300)"/>
+    <wire from="(190,230)" to="(290,230)"/>
+    <wire from="(190,300)" to="(190,370)"/>
+    <wire from="(190,300)" to="(240,300)"/>
+    <wire from="(190,370)" to="(210,370)"/>
+    <wire from="(210,150)" to="(210,190)"/>
+    <wire from="(210,190)" to="(210,260)"/>
+    <wire from="(210,190)" to="(240,190)"/>
+    <wire from="(210,260)" to="(210,330)"/>
+    <wire from="(210,260)" to="(290,260)"/>
+    <wire from="(270,190)" to="(290,190)"/>
+    <wire from="(270,300)" to="(290,300)"/>
+    <wire from="(270,350)" to="(310,350)"/>
+    <wire from="(340,210)" to="(410,210)"/>
+    <wire from="(340,280)" to="(410,280)"/>
+    <wire from="(340,350)" to="(410,350)"/>
+    <wire from="(400,170)" to="(400,240)"/>
+    <wire from="(400,170)" to="(410,170)"/>
+    <wire from="(400,240)" to="(400,310)"/>
+    <wire from="(400,240)" to="(410,240)"/>
+    <wire from="(400,310)" to="(410,310)"/>
+    <wire from="(400,50)" to="(400,170)"/>
+    <wire from="(460,190)" to="(540,190)"/>
+    <wire from="(460,260)" to="(540,260)"/>
+    <wire from="(460,330)" to="(810,330)"/>
+    <wire from="(520,220)" to="(540,220)"/>
+    <wire from="(520,80)" to="(520,220)"/>
+    <wire from="(540,110)" to="(540,150)"/>
+    <wire from="(590,170)" to="(800,170)"/>
+    <wire from="(590,240)" to="(830,240)"/>
+    <wire from="(800,170)" to="(800,310)"/>
+    <wire from="(800,310)" to="(830,310)"/>
+    <wire from="(810,170)" to="(810,330)"/>
+    <wire from="(810,170)" to="(820,170)"/>
+  </circuit>
+</project>

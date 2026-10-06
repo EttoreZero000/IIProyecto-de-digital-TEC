@@ -21,29 +21,36 @@
 
 
 module comparador_1bit (
-    input wire A,
-    input wire B,
+    // Bits individuales de las posiciones P (actual) y T (objetivo)
+    input wire P,        // Posición Actual P
+    input wire T,        // Posición Objetivo T
     
-    input wire GT_in, // (A > B anterior)
-    input wire EQ_in, // (A == B anterior)
-    input wire LT_in, // (A < B anterior)
+    // Entradas en cascada dicho en el proyecto
+    input wire mayor_in,            // P > T anterior
+    input wire igual_in,            // P == T anterior
+    input wire menor_in,            // P < T anterior
     
-    output wire GT_out,
-    output wire EQ_out,
-    output wire LT_out
+    // Salidas en cascada, para repetirlo N bits
+    output wire mayor_out,          // P > T
+    output wire igual_out,          // P == T
+    output wire menor_out           // P < T
 );
-    wire A_eq_B;
-    wire A_gt_B;
-    wire A_lt_B;
+
+    // Señales intermedias de comparación
+    wire bits_iguales;              // P == T
+    wire pos_actual_mayor;          // P > T
+    wire pos_actual_menor;          // P < T
 
     // Lógica del bit actual
-    assign A_eq_B = ~(A ^ B);      // XNOR (son iguales)
-    assign A_gt_B = A & (~B);       // A = 1, B = 0
-    assign A_lt_B = (~A) & B;       // A = 0, B = 1
+    assign bits_iguales    = ~(P ^ T);      // XNOR
+    assign pos_actual_mayor = P & (~T);     // 1 y 0
+    assign pos_actual_menor = (~P) & T;     // 0 y 1
 
-    // Salidas en cascada (prioridad del bit más significativo)
-    assign GT_out = GT_in | (EQ_in & A_gt_B);
-    assign LT_out = LT_in | (EQ_in & A_lt_B);
-    assign EQ_out = EQ_in & A_eq_B;
+    // Salidas en cascada (mantiene prioridad de los bits más significativos)
+    assign mayor_out = mayor_in | (igual_in & pos_actual_mayor);    // P>T
+    assign menor_out = menor_in | (igual_in & pos_actual_menor);    // P<T
+    assign igual_out = igual_in & bits_iguales;                     // P=T
+
+
 
 endmodule
