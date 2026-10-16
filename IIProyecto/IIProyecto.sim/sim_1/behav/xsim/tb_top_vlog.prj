@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../IIProyecto.srcs/sources_1/new/comparador_1bit.v" \
+"../../../../IIProyecto.srcs/sources_1/new/comparador_3bits.v" \
+"../../../../IIProyecto.srcs/sources_1/new/control_sistema.v" \
+"../../../../IIProyecto.srcs/sources_1/new/decodificador_7seg.v" \
+"../../../../IIProyecto.srcs/sources_1/new/gray_a_binario.v" \
+"../../../../IIProyecto.srcs/sources_1/new/top.v" \
+"../../../../IIProyecto.srcs/sim_1/new/tb_top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

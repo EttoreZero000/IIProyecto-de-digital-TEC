@@ -1,0 +1,26 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/hector/vivado/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto 23c03f45c6a54ad39307f1c7a3c963e1 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/hector/vivado/proyectos_vivados/IIProyecto/IIProyecto.srcs/sources_1/new/top.v" Line 1. Module top doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hector/vivado/proyectos_vivados/IIProyecto/IIProyecto.srcs/sources_1/new/gray_a_binario.v" Line 1. Module gray_a_binario doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hector/vivado/proyectos_vivados/IIProyecto/IIProyecto.srcs/sources_1/new/comparador_3bits.v" Line 1. Module comparador_3bits doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hector/vivado/proyectos_vivados/IIProyecto/IIProyecto.srcs/sources_1/new/comparador_1bit.v" Line 1. Module comparador_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hector/vivado/proyectos_vivados/IIProyecto/IIProyecto.srcs/sources_1/new/comparador_1bit.v" Line 1. Module comparador_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hector/vivado/proyectos_vivados/IIProyecto/IIProyecto.srcs/sources_1/new/comparador_1bit.v" Line 1. Module comparador_1bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hector/vivado/proyectos_vivados/IIProyecto/IIProyecto.srcs/sources_1/new/control_sistema.v" Line 1. Module control_sistema doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hector/vivado/proyectos_vivados/IIProyecto/IIProyecto.srcs/sources_1/new/decodificador_7seg.v" Line 1. Module decodificador_7seg doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.gray_a_binario
+Compiling module xil_defaultlib.comparador_1bit
+Compiling module xil_defaultlib.comparador_3bits
+Compiling module xil_defaultlib.control_sistema
+Compiling module xil_defaultlib.decodificador_7seg
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_behav
